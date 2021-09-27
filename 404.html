@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./img/favicon/apple-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./img/favicon/apple-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./img/favicon/apple-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./img/favicon/apple-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./img/favicon/apple-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./img/favicon/apple-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./img/favicon/apple-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./img/favicon/apple-icon-152x152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="192x192" href="./img/favicon/android-icon-192x192.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon-96x96.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="./img/favicon/ms-icon-144x144.png" />
+		<meta name="theme-color" content="#ffffff" />
+
+		<title>404</title>
+	</head>
+	<body>
+<!-- header -->
+<div class="page page_black">
+	<div class="e404">
+		<div id="preloader" class="hidden"></div>
+<script>
+	let preloaderEl = document.getElementById('preloader');
+	preloaderEl.classList.remove('hidden');
+	window.onload = function () {
+		preloaderEl.classList.add('hidden');
+		if (document.getElementById('hero')) {
+			document.getElementById('hero').classList.add('ready');
+		}
+	};
+</script>
+
+<style>
+	#preloader {
+		position: fixed;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		left: 0;
+		top: 0;
+		z-index: 999;
+		width: 100%;
+		height: 100%;
+		overflow: visible;
+		background: #fbfbfb url('./img/processing.gif') no-repeat center center;
+	}
+	.hidden {
+		visibility: hidden;
+		opacity: 0;
+	}
+</style>
+
+<aside class="aside">
+	<div class="aside__lang js-lang">
+		<a href="#" class="aside__lang-item aside__lang-item_active">Ru</a>
+		<a href="#" class="aside__lang-item">Ua</a>
+	</div>
+	<div class="aside__actions">
+		<a href="#search" data-fancybox class="aside__actions-item">
+			<svg><use href="./img/sprite.svg#search"></use></svg>
+		</a>
+		<a href="#" class="aside__actions-item js-cart">
+			<svg><use href="./img/sprite.svg#trolley"></use></svg>
+		</a>
+		<a href="#" class="aside__actions-item js-wishlist">
+			<svg><use href="./img/sprite.svg#heart"></use></svg>
+		</a>
+	</div>
+	<div class="aside__social js-social">
+		<a href="#" class="aside__social-item">
+			<svg><use href="./img/sprite.svg#facebook"></use></svg>
+		</a>
+		<a href="#" class="aside__social-item">
+			<svg><use href="./img/sprite.svg#instagram"></use></svg>
+		</a>
+		<a href="#" class="aside__social-item">
+			<svg><use href="./img/sprite.svg#youtube"></use></svg>
+		</a>
+	</div>
+	<div class="aside__contacts js-contacts">
+		<a href="#" class="aside__contacts-item">
+			<svg><use href="./img/sprite.svg#telegram"></use></svg>
+		</a>
+		<a href="#" class="aside__contacts-item">
+			<svg><use href="./img/sprite.svg#watsapp"></use></svg>
+		</a>
+		<a href="#" class="aside__contacts-item">
+			<svg><use href="./img/sprite.svg#viber"></use></svg>
+		</a>
+	</div>
+	<button class="aside__btn-callback js-callback">
+		<svg><use href="./img/sprite.svg#phone"></use></svg>
+	</button>
+</aside>
+<header class="header">
+	<div class="header__top header-mobile">
+		<div class="container container_sm">
+			<div class="header-mobile__actions">
+				<div class="header-search">
+					<div class="input">
+						<input type="text" placeholder="Поиск по сайту" />
+					</div>
+					<button class="header-search__btn" type="submit">
+						<svg><use href="./img/sprite.svg#search"></use></svg>
+					</button>
+				</div>
+			</div>
+			<ul class="menu js-menu">
+				<li>
+					<a href="./about.html" class="menu__link">О нас</a>
+				</li>
+				<li>
+					<a href="./blog.html" class="menu__link">Блог</a>
+				</li>
+				<li>
+					<a href="./video-reviews.html" class="menu__link">Видео-обзоры</a>
+				</li>
+				<li>
+					<span class="menu__sticker">150+</span>
+					<a href="./reviews.html" class="menu__link">Отзывы</a>
+				</li>
+				<li>
+					<a href="./delivery-payment.html" class="menu__link">Оплата и доставка</a>
+				</li>
+				<li>
+					<a href="./contacts.html" class="menu__link">Контакты</a>
+				</li>
+			</ul>
+			<a href="#" class="header__test-drive">
+				Тест-драйв
+				<div class="tooltip">
+					<svg><use href="./img/sprite.svg#info"></use></svg>
+					<span
+						>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dicta libero quisquam, necessitatibus illum eligendi animi
+						eius at maiores provident? Quasi praesentium, neque modi doloremque quis sunt cum eveniet quisquam?</span
+					>
+				</div>
+			</a>
+			<div class="header__contacts">
+				<div class="header__contacts-icon">
+					<svg><use href="./img/sprite.svg#pin_red"></use></svg>
+				</div>
+				<div class="header__contacts-text">
+					Украина, г. Днепр <br />
+					пр-т Александра Поля, 97
+				</div>
+			</div>
+			<div class="header__callback">
+				<a href="#" class="header__callback-href">+38 (067) 652 28 48 </a>
+				<a href="#" class="header__callback-btn">Заказать звонок</a>
+			</div>
+		</div>
+	</div>
+	<div class="container container_sm">
+		<div class="header__bottom">
+			<a href="" class="logo logo_header">
+				<svg><use href="./img/sprite.svg#logo"></use></svg>
+			</a>
+
+			<div class="header-mobile__btn js-menu-btn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<a href="" class="logo logo_mobile">
+				<svg><use href="./img/sprite.svg#logo_mobile"></use></svg>
+			</a>
+			<div class="header-catalog js-catalog">
+				<div class="header-catalog__item">
+					<a href="./catalog.html" class="header-catalog__link">Мотоциклы</a>
+					<div class="header-catalog__toggle js-catalog-toggle">
+						<svg><use href="./img/sprite.svg#arrow-dropdown"></use></svg>
+					</div>
+					<div class="header-submenu">
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bmw"></use></svg>
+							</div>
+							<div class="header-submenu__title">BMW</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#harley"></use></svg>
+							</div>
+							<div class="header-submenu__title">Harley Davidson</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#honda"></use></svg>
+							</div>
+							<div class="header-submenu__title">Honda</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#kawasaki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Kawasaki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#suzuki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Suzuki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#yamaha"></use></svg>
+							</div>
+							<div class="header-submenu__title">Yamaha</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#mozy"></use></svg>
+							</div>
+							<div class="header-submenu__title">Другие марки</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bike_3"></use></svg>
+							</div>
+							<div class="header-submenu__title">Мотоциклы <b>В наличии</b></div>
+						</a>
+					</div>
+				</div>
+				<div class="header-catalog__item">
+					<a href="./catalog.html" class="header-catalog__link">Макси скутера</a>
+					<div class="header-catalog__toggle js-catalog-toggle">
+						<svg><use href="./img/sprite.svg#arrow-dropdown"></use></svg>
+					</div>
+					<div class="header-submenu">
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bmw"></use></svg>
+							</div>
+							<div class="header-submenu__title">BMW</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#harley"></use></svg>
+							</div>
+							<div class="header-submenu__title">Harley Davidson</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#honda"></use></svg>
+							</div>
+							<div class="header-submenu__title">Honda</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#kawasaki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Kawasaki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#suzuki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Suzuki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#yamaha"></use></svg>
+							</div>
+							<div class="header-submenu__title">Yamaha</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#mozy"></use></svg>
+							</div>
+							<div class="header-submenu__title">Другие марки</div>
+						</a>
+						<a href="./catalog.html" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bike_3"></use></svg>
+							</div>
+							<div class="header-submenu__title">Мотоциклы <b>В наличии</b></div>
+						</a>
+					</div>
+				</div>
+				<div class="header-catalog__item">
+					<a href="#" class="header-catalog__link">Тип Мотоцикла</a>
+					<div class="header-catalog__toggle js-catalog-toggle">
+						<svg><use href="./img/sprite.svg#arrow-dropdown"></use></svg>
+					</div>
+					<div class="header-submenu">
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bmw"></use></svg>
+							</div>
+							<div class="header-submenu__title">BMW</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#harley"></use></svg>
+							</div>
+							<div class="header-submenu__title">Harley Davidson</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#honda"></use></svg>
+							</div>
+							<div class="header-submenu__title">Honda</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#kawasaki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Kawasaki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#suzuki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Suzuki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#yamaha"></use></svg>
+							</div>
+							<div class="header-submenu__title">Yamaha</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#mozy"></use></svg>
+							</div>
+							<div class="header-submenu__title">Другие марки</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bike_3"></use></svg>
+							</div>
+							<div class="header-submenu__title">Мотоциклы <b>В наличии</b></div>
+						</a>
+					</div>
+				</div>
+				<div class="header-catalog__item">
+					<a href="./catalog.html" class="header-catalog__link">Мотоциклы Под заказ</a>
+					<div class="header-catalog__toggle js-catalog-toggle">
+						<svg><use href="./img/sprite.svg#arrow-dropdown"></use></svg>
+					</div>
+					<div class="header-submenu">
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bmw"></use></svg>
+							</div>
+							<div class="header-submenu__title">BMW</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#harley"></use></svg>
+							</div>
+							<div class="header-submenu__title">Harley Davidson</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#honda"></use></svg>
+							</div>
+							<div class="header-submenu__title">Honda</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#kawasaki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Kawasaki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#suzuki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Suzuki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#yamaha"></use></svg>
+							</div>
+							<div class="header-submenu__title">Yamaha</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#mozy"></use></svg>
+							</div>
+							<div class="header-submenu__title">Другие марки</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bike_3"></use></svg>
+							</div>
+							<div class="header-submenu__title">Мотоциклы <b>В наличии</b></div>
+						</a>
+					</div>
+				</div>
+				<div class="header-catalog__item">
+					<a href="./catalog.html" class="header-catalog__link">Распродажа</a>
+					<div class="header-catalog__toggle js-catalog-toggle">
+						<svg><use href="./img/sprite.svg#arrow-dropdown"></use></svg>
+					</div>
+					<div class="header-submenu">
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bmw"></use></svg>
+							</div>
+							<div class="header-submenu__title">BMW</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#harley"></use></svg>
+							</div>
+							<div class="header-submenu__title">Harley Davidson</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#honda"></use></svg>
+							</div>
+							<div class="header-submenu__title">Honda</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#kawasaki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Kawasaki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#suzuki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Suzuki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#yamaha"></use></svg>
+							</div>
+							<div class="header-submenu__title">Yamaha</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#mozy"></use></svg>
+							</div>
+							<div class="header-submenu__title">Другие марки</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bike_3"></use></svg>
+							</div>
+							<div class="header-submenu__title">Мотоциклы <b>В наличии</b></div>
+						</a>
+					</div>
+				</div>
+				<div class="header-catalog__item">
+					<a href="./catalog.html" class="header-catalog__link">Экипировка</a>
+					<div class="header-catalog__toggle js-catalog-toggle">
+						<svg><use href="./img/sprite.svg#arrow-dropdown"></use></svg>
+					</div>
+					<div class="header-submenu">
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bmw"></use></svg>
+							</div>
+							<div class="header-submenu__title">BMW</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#harley"></use></svg>
+							</div>
+							<div class="header-submenu__title">Harley Davidson</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#honda"></use></svg>
+							</div>
+							<div class="header-submenu__title">Honda</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#kawasaki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Kawasaki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#suzuki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Suzuki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#yamaha"></use></svg>
+							</div>
+							<div class="header-submenu__title">Yamaha</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#mozy"></use></svg>
+							</div>
+							<div class="header-submenu__title">Другие марки</div>
+						</a>
+						<a href="./catalog.html" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bike_3"></use></svg>
+							</div>
+							<div class="header-submenu__title">Мотоциклы <b>В наличии</b></div>
+						</a>
+					</div>
+				</div>
+				<div class="header-catalog__item">
+					<a href="./catalog.html" class="header-catalog__link">Обслуживание</a>
+					<div class="header-catalog__toggle js-catalog-toggle">
+						<svg><use href="./img/sprite.svg#arrow-dropdown"></use></svg>
+					</div>
+					<div class="header-submenu">
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bmw"></use></svg>
+							</div>
+							<div class="header-submenu__title">BMW</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#harley"></use></svg>
+							</div>
+							<div class="header-submenu__title">Harley Davidson</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#honda"></use></svg>
+							</div>
+							<div class="header-submenu__title">Honda</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#kawasaki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Kawasaki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#suzuki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Suzuki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#yamaha"></use></svg>
+							</div>
+							<div class="header-submenu__title">Yamaha</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#mozy"></use></svg>
+							</div>
+							<div class="header-submenu__title">Другие марки</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bike_3"></use></svg>
+							</div>
+							<div class="header-submenu__title">Мотоциклы <b>В наличии</b></div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+		<!-- breadcrumbs -->
+		<div class="container">
+			<ul class="breadcrumbs">
+	<li>
+		<a href="./index.html">Главная</a>
+	</li>
+	<li class="slash">/</li>
+	
+	<li class="active">404</li>
+</ul>
+
+			<div class="e404__img">
+				<img src="./img/webp/404.webp" alt="img" />
+			</div>
+			<div class="e404__title">Упс...</div>
+			<div class="e404__subtitle">
+				Мы сожалеем, но страница на которую Вы пытались перейти не существует. Попробуйте, пожалуйста вернуться на главную страницу или
+				воспользуйтесь меню сайта.
+			</div>
+			<a href="#" class="btn-primary btn-red btn-size-3">Вернуться на главную</a>
+		</div>
+	</div>
+</div>
+<!-- footer -->
+<footer class="footer">
+	<div class="footer__top">
+		<div class="container container_sm">
+			<ul class="footer__services">
+				<li>
+					<a href="./catalog.html" class="footer__services-link">Мотоциклы</a>
+				</li>
+				<li>
+					<a href="./catalog.html" class="footer__services-link">Макси скутера</a>
+				</li>
+				<li>
+					<a href="./catalog.html" class="footer__services-link">Тип Мотоцикла</a>
+				</li>
+				<li>
+					<a href="./catalog.html" class="footer__services-link">Мотоциклы Под заказ</a>
+				</li>
+				<li>
+					<a href="./catalog.html" class="footer__services-link">Распродажа</a>
+				</li>
+				<li>
+					<a href="./catalog.html" class="footer__services-link">Экипировка</a>
+				</li>
+				<li>
+					<a href="./catalog.html" class="footer__services-link">Обслуживание</a>
+				</li>
+			</ul>
+			<a href="#" class="footer__testdrive">Тест-драйв</a>
+			<a href="#" class="footer__online">Онлайн осмотр</a>
+		</div>
+	</div>
+	<div class="footer__bottom">
+		<div class="container container_sm">
+			<div class="footer__bottom-wrapper">
+				<a href="./index.html" class="logo logo_footer">
+					<svg><use href="./img/sprite.svg#logo_black"></use></svg>
+				</a>
+				<ul class="footer__menu">
+					<li><a href="./about.html" class="footer__menu-link">О нас</a></li>
+					<li><a href="./blog.html" class="footer__menu-link">Блог</a></li>
+					<li><a href="./video-reviews.html" class="footer__menu-link">Видео-обзоры</a></li>
+					<li>
+						<span class="menu__sticker menu__sticker_red">150+</span>
+						<a href="./reviews.html" class="footer__menu-link">Отзывы</a>
+					
+					</li>
+					<li><a href="./delivery-payment.html" class="footer__menu-link">Оплата и доставка</a></li>
+					<li><a href="./contacts" class="footer__menu-link">Контакты</a></li>
+				</ul>
+				<div class="footer__contacts">
+					<div class="footer__contacts-icon">
+						<svg>
+							<use href="./img/sprite.svg#pin_red"></use>
+						</svg>
+					</div>
+					<div class="footer__contacts-text">
+						Украина, г. Днепр <br />
+						пр-т Александра Поля, 97
+					</div>
+				</div>
+
+				<div class="footer__callback">
+					<a href="#" class="footer__callback-href">+38 (067) 652 28 48 </a>
+					<a href="#" class="footer__callback-btn">Заказать звонок</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer__copyright">
+		<div class="container container_sm">
+			<div class="footer__copyright-text">© 2014-2021 MotoYard</div>
+			<div class="footer__dev">
+				Интернет-магазин разработан и <br />
+				поддерживается веб-студией 
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div class="modal" id="thanks">
+	<div class="modal__title">Спасибо!</div>
+	<div class="modal__subtitle modal__subtitle_bold">Ваш заказ был принят!</div>
+</div>
+
+<div class="modal" id="callback">
+	<div class="modal__title modal__title_sm">Обратный звонок</div>
+	<div class="modal__subtitle">
+		Оставьте ваши данные и наш менеджер <br />
+		свяжется с Вами
+	</div>
+
+	<form class="modal__form">
+		<div class="input input_gradient">
+			<input type="text" class="js-placeholder" />
+			<label class="input__placeholder">Ваше имя</label>
+		</div>
+		<div class="input input_gradient">
+			<input type="tel" placeholder="+38 000 000 00 00" />
+		</div>
+		<button class="btn-primary btn-red btn-size-1">Оставить заявку</button>
+		<div class="modal__notice">
+			Нажимая на кнопку, Вы принимаете условия пользовательского <br />
+			соглашения и даете согласие на обработку ваших персональных данных
+		</div>
+	</form>
+</div>
+
+<div class="modal" id="cart">
+	<div class="modal__row">
+		<div class="modal__cart-img">
+			<img src="./img/webp/modal-img.webp" alt="img" />
+		</div>
+		<div class="modal__cart-text">
+			Товар <a href="./product-page.html">Yamaha FZ6 FAZER </a> был успешно <br />
+			добавлен в корзину!
+		</div>
+	</div>
+</div>
+
+<div class="modal" id="search">
+	<div class="modal__subtitle modal__subtitle_bold modal__subtitle_left">Поиск по сайту</div>
+	<form action="" class="modal__search">
+		<div class="input input_bottom-border"><input type="text" placeholder="поиск" /></div>
+		<button class="btn-search">
+			<svg><use href="./img/sprite.svg#search"></use></svg>
+		</button>
+	</form>
+</div>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./css/main.min.css" />
+<script src="./js/jquery.min.js"></script>
+<script src="./js/app.min.js"></script>
+</body>
+</html>
+

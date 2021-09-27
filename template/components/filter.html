@@ -1,0 +1,273 @@
+<div class="filter js-filter">
+	<div class="filter__top js-filter-back">Фильтр</div>
+
+	<div class="filter__price">
+		<div class="filter__heading">
+			<div class="filter__title">Цена, $</div>
+			<button class="filter__toggle">
+				<svg><use href="./img/sprite.svg#arrow"></use></svg>
+			</button>
+		</div>
+
+		<div class="js-wrapper">
+			<div class="filter__price-ranges price-ranges">
+				<div class="price-ranges__input">
+					<div class="price-ranges__input-caption">от</div>
+					<input type="text" id="nouislider-input__start" />
+				</div>
+				<div class="price-ranges__input">
+					<div class="price-ranges__input-caption">до</div>
+					<input type="text" id="nouislider-input__end" />
+				</div>
+			</div>
+			<div id="nouislider"></div>
+		</div>
+	</div>
+
+	<div class="filter__options">
+		<div class="filter__heading">
+			<div class="filter__title">Наличие</div>
+			<button class="filter__toggle">
+				<svg><use href="./img/sprite.svg#arrow"></use></svg>
+			</button>
+		</div>
+		<div class="js-wrapper">
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__caption">В наличии</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__caption">Под заказ</div>
+			</label>
+		</div>
+	</div>
+
+	<div class="filter__options">
+		<div class="filter__heading">
+			<div class="filter__title">Объем двигателя</div>
+			<button class="filter__toggle">
+				<svg><use href="./img/sprite.svg#arrow"></use></svg>
+			</button>
+		</div>
+		<div class="js-wrapper">
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__caption">до 250 кубов</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__caption">от 251 до 400 кубов</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__caption">от 401 до 750 кубов</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__caption">от 751 и более</div>
+			</label>
+		</div>
+	</div>
+
+	<div class="filter__options">
+		<div class="filter__heading">
+			<div class="filter__title">Выбор цвета</div>
+			<button class="filter__toggle">
+				<svg><use href="./img/sprite.svg#arrow"></use></svg>
+			</button>
+		</div>
+
+		<div class="filter__color js-wrapper">
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #fff"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #d9d9d9"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #000"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #ffe600"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #ff9a03"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #46dc00"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #00d1ff"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #0018f0"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #7000ff"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #fb1fff"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #de0c25"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #830615"></span>
+			</label>
+		</div>
+	</div>
+
+	<div class="filter__options">
+		<div class="filter__heading">
+			<div class="filter__title">Тип мотоцикла</div>
+			<button class="filter__toggle">
+				<svg><use href="./img/sprite.svg#arrow"></use></svg>
+			</button>
+		</div>
+		<div class="js-wrapper">
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#type-1"></use></svg>
+				</div>
+				<div class="checkbox__caption">Дорожные</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#type-2"></use></svg>
+				</div>
+				<div class="checkbox__caption">Спорт-турист</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#type-3"></use></svg>
+				</div>
+				<div class="checkbox__caption">Спортбайк (Спортивные)</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#type-4"></use></svg>
+				</div>
+				<div class="checkbox__caption">Тур-Эндуро</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#type-5"></use></svg>
+				</div>
+				<div class="checkbox__caption">Туристические</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#type-6"></use></svg>
+				</div>
+				<div class="checkbox__caption">Чопперы</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#type-7"></use></svg>
+				</div>
+				<div class="checkbox__caption">Эндуро / Мотард</div>
+			</label>
+		</div>
+	</div>
+
+	<div class="filter__options">
+		<div class="filter__heading">
+			<div class="filter__title">Марка мотоцикла</div>
+			<button class="filter__toggle">
+				<svg><use href="./img/sprite.svg#arrow"></use></svg>
+			</button>
+		</div>
+
+		<div class="js-wrapper">
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#bmw"></use></svg>
+				</div>
+				<div class="checkbox__caption">BMW</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#harley"></use></svg>
+				</div>
+				<div class="checkbox__caption">Harley Davidson</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#honda"></use></svg>
+				</div>
+				<div class="checkbox__caption">Honda</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#kawasaki"></use></svg>
+				</div>
+				<div class="checkbox__caption">Kawasaki</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#suzuki"></use></svg>
+				</div>
+				<div class="checkbox__caption">Suzuki</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#yamaha"></use></svg>
+				</div>
+				<div class="checkbox__caption">Yamaha</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#mozy"></use></svg>
+				</div>
+				<div class="checkbox__caption">Другие марки</div>
+			</label>
+		</div>
+	</div>
+</div>

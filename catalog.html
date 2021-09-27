@@ -1,0 +1,1849 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./img/favicon/apple-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./img/favicon/apple-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./img/favicon/apple-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./img/favicon/apple-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./img/favicon/apple-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./img/favicon/apple-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./img/favicon/apple-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./img/favicon/apple-icon-152x152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="192x192" href="./img/favicon/android-icon-192x192.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon-96x96.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="./img/favicon/ms-icon-144x144.png" />
+		<meta name="theme-color" content="#ffffff" />
+
+		<title>Мотоциклы</title>
+	</head>
+	<body>
+<!-- header -->
+<div class="page">
+	<div id="preloader" class="hidden"></div>
+<script>
+	let preloaderEl = document.getElementById('preloader');
+	preloaderEl.classList.remove('hidden');
+	window.onload = function () {
+		preloaderEl.classList.add('hidden');
+		if (document.getElementById('hero')) {
+			document.getElementById('hero').classList.add('ready');
+		}
+	};
+</script>
+
+<style>
+	#preloader {
+		position: fixed;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		left: 0;
+		top: 0;
+		z-index: 999;
+		width: 100%;
+		height: 100%;
+		overflow: visible;
+		background: #fbfbfb url('./img/processing.gif') no-repeat center center;
+	}
+	.hidden {
+		visibility: hidden;
+		opacity: 0;
+	}
+</style>
+
+<aside class="aside">
+	<div class="aside__lang js-lang">
+		<a href="#" class="aside__lang-item aside__lang-item_active">Ru</a>
+		<a href="#" class="aside__lang-item">Ua</a>
+	</div>
+	<div class="aside__actions">
+		<a href="#search" data-fancybox class="aside__actions-item">
+			<svg><use href="./img/sprite.svg#search"></use></svg>
+		</a>
+		<a href="#" class="aside__actions-item js-cart">
+			<svg><use href="./img/sprite.svg#trolley"></use></svg>
+		</a>
+		<a href="#" class="aside__actions-item js-wishlist">
+			<svg><use href="./img/sprite.svg#heart"></use></svg>
+		</a>
+	</div>
+	<div class="aside__social js-social">
+		<a href="#" class="aside__social-item">
+			<svg><use href="./img/sprite.svg#facebook"></use></svg>
+		</a>
+		<a href="#" class="aside__social-item">
+			<svg><use href="./img/sprite.svg#instagram"></use></svg>
+		</a>
+		<a href="#" class="aside__social-item">
+			<svg><use href="./img/sprite.svg#youtube"></use></svg>
+		</a>
+	</div>
+	<div class="aside__contacts js-contacts">
+		<a href="#" class="aside__contacts-item">
+			<svg><use href="./img/sprite.svg#telegram"></use></svg>
+		</a>
+		<a href="#" class="aside__contacts-item">
+			<svg><use href="./img/sprite.svg#watsapp"></use></svg>
+		</a>
+		<a href="#" class="aside__contacts-item">
+			<svg><use href="./img/sprite.svg#viber"></use></svg>
+		</a>
+	</div>
+	<button class="aside__btn-callback js-callback">
+		<svg><use href="./img/sprite.svg#phone"></use></svg>
+	</button>
+</aside>
+<header class="header">
+	<div class="header__top header-mobile">
+		<div class="container container_sm">
+			<div class="header-mobile__actions">
+				<div class="header-search">
+					<div class="input">
+						<input type="text" placeholder="Поиск по сайту" />
+					</div>
+					<button class="header-search__btn" type="submit">
+						<svg><use href="./img/sprite.svg#search"></use></svg>
+					</button>
+				</div>
+			</div>
+			<ul class="menu js-menu">
+				<li>
+					<a href="./about.html" class="menu__link">О нас</a>
+				</li>
+				<li>
+					<a href="./blog.html" class="menu__link">Блог</a>
+				</li>
+				<li>
+					<a href="./video-reviews.html" class="menu__link">Видео-обзоры</a>
+				</li>
+				<li>
+					<span class="menu__sticker">150+</span>
+					<a href="./reviews.html" class="menu__link">Отзывы</a>
+				</li>
+				<li>
+					<a href="./delivery-payment.html" class="menu__link">Оплата и доставка</a>
+				</li>
+				<li>
+					<a href="./contacts.html" class="menu__link">Контакты</a>
+				</li>
+			</ul>
+			<a href="#" class="header__test-drive">
+				Тест-драйв
+				<div class="tooltip">
+					<svg><use href="./img/sprite.svg#info"></use></svg>
+					<span
+						>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dicta libero quisquam, necessitatibus illum eligendi animi
+						eius at maiores provident? Quasi praesentium, neque modi doloremque quis sunt cum eveniet quisquam?</span
+					>
+				</div>
+			</a>
+			<div class="header__contacts">
+				<div class="header__contacts-icon">
+					<svg><use href="./img/sprite.svg#pin_red"></use></svg>
+				</div>
+				<div class="header__contacts-text">
+					Украина, г. Днепр <br />
+					пр-т Александра Поля, 97
+				</div>
+			</div>
+			<div class="header__callback">
+				<a href="#" class="header__callback-href">+38 (067) 652 28 48 </a>
+				<a href="#" class="header__callback-btn">Заказать звонок</a>
+			</div>
+		</div>
+	</div>
+	<div class="container container_sm">
+		<div class="header__bottom">
+			<a href="" class="logo logo_header">
+				<svg><use href="./img/sprite.svg#logo"></use></svg>
+			</a>
+
+			<div class="header-mobile__btn js-menu-btn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<a href="" class="logo logo_mobile">
+				<svg><use href="./img/sprite.svg#logo_mobile"></use></svg>
+			</a>
+			<div class="header-catalog js-catalog">
+				<div class="header-catalog__item">
+					<a href="./catalog.html" class="header-catalog__link">Мотоциклы</a>
+					<div class="header-catalog__toggle js-catalog-toggle">
+						<svg><use href="./img/sprite.svg#arrow-dropdown"></use></svg>
+					</div>
+					<div class="header-submenu">
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bmw"></use></svg>
+							</div>
+							<div class="header-submenu__title">BMW</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#harley"></use></svg>
+							</div>
+							<div class="header-submenu__title">Harley Davidson</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#honda"></use></svg>
+							</div>
+							<div class="header-submenu__title">Honda</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#kawasaki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Kawasaki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#suzuki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Suzuki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#yamaha"></use></svg>
+							</div>
+							<div class="header-submenu__title">Yamaha</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#mozy"></use></svg>
+							</div>
+							<div class="header-submenu__title">Другие марки</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bike_3"></use></svg>
+							</div>
+							<div class="header-submenu__title">Мотоциклы <b>В наличии</b></div>
+						</a>
+					</div>
+				</div>
+				<div class="header-catalog__item">
+					<a href="./catalog.html" class="header-catalog__link">Макси скутера</a>
+					<div class="header-catalog__toggle js-catalog-toggle">
+						<svg><use href="./img/sprite.svg#arrow-dropdown"></use></svg>
+					</div>
+					<div class="header-submenu">
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bmw"></use></svg>
+							</div>
+							<div class="header-submenu__title">BMW</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#harley"></use></svg>
+							</div>
+							<div class="header-submenu__title">Harley Davidson</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#honda"></use></svg>
+							</div>
+							<div class="header-submenu__title">Honda</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#kawasaki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Kawasaki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#suzuki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Suzuki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#yamaha"></use></svg>
+							</div>
+							<div class="header-submenu__title">Yamaha</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#mozy"></use></svg>
+							</div>
+							<div class="header-submenu__title">Другие марки</div>
+						</a>
+						<a href="./catalog.html" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bike_3"></use></svg>
+							</div>
+							<div class="header-submenu__title">Мотоциклы <b>В наличии</b></div>
+						</a>
+					</div>
+				</div>
+				<div class="header-catalog__item">
+					<a href="#" class="header-catalog__link">Тип Мотоцикла</a>
+					<div class="header-catalog__toggle js-catalog-toggle">
+						<svg><use href="./img/sprite.svg#arrow-dropdown"></use></svg>
+					</div>
+					<div class="header-submenu">
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bmw"></use></svg>
+							</div>
+							<div class="header-submenu__title">BMW</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#harley"></use></svg>
+							</div>
+							<div class="header-submenu__title">Harley Davidson</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#honda"></use></svg>
+							</div>
+							<div class="header-submenu__title">Honda</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#kawasaki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Kawasaki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#suzuki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Suzuki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#yamaha"></use></svg>
+							</div>
+							<div class="header-submenu__title">Yamaha</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#mozy"></use></svg>
+							</div>
+							<div class="header-submenu__title">Другие марки</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bike_3"></use></svg>
+							</div>
+							<div class="header-submenu__title">Мотоциклы <b>В наличии</b></div>
+						</a>
+					</div>
+				</div>
+				<div class="header-catalog__item">
+					<a href="./catalog.html" class="header-catalog__link">Мотоциклы Под заказ</a>
+					<div class="header-catalog__toggle js-catalog-toggle">
+						<svg><use href="./img/sprite.svg#arrow-dropdown"></use></svg>
+					</div>
+					<div class="header-submenu">
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bmw"></use></svg>
+							</div>
+							<div class="header-submenu__title">BMW</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#harley"></use></svg>
+							</div>
+							<div class="header-submenu__title">Harley Davidson</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#honda"></use></svg>
+							</div>
+							<div class="header-submenu__title">Honda</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#kawasaki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Kawasaki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#suzuki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Suzuki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#yamaha"></use></svg>
+							</div>
+							<div class="header-submenu__title">Yamaha</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#mozy"></use></svg>
+							</div>
+							<div class="header-submenu__title">Другие марки</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bike_3"></use></svg>
+							</div>
+							<div class="header-submenu__title">Мотоциклы <b>В наличии</b></div>
+						</a>
+					</div>
+				</div>
+				<div class="header-catalog__item">
+					<a href="./catalog.html" class="header-catalog__link">Распродажа</a>
+					<div class="header-catalog__toggle js-catalog-toggle">
+						<svg><use href="./img/sprite.svg#arrow-dropdown"></use></svg>
+					</div>
+					<div class="header-submenu">
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bmw"></use></svg>
+							</div>
+							<div class="header-submenu__title">BMW</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#harley"></use></svg>
+							</div>
+							<div class="header-submenu__title">Harley Davidson</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#honda"></use></svg>
+							</div>
+							<div class="header-submenu__title">Honda</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#kawasaki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Kawasaki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#suzuki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Suzuki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#yamaha"></use></svg>
+							</div>
+							<div class="header-submenu__title">Yamaha</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#mozy"></use></svg>
+							</div>
+							<div class="header-submenu__title">Другие марки</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bike_3"></use></svg>
+							</div>
+							<div class="header-submenu__title">Мотоциклы <b>В наличии</b></div>
+						</a>
+					</div>
+				</div>
+				<div class="header-catalog__item">
+					<a href="./catalog.html" class="header-catalog__link">Экипировка</a>
+					<div class="header-catalog__toggle js-catalog-toggle">
+						<svg><use href="./img/sprite.svg#arrow-dropdown"></use></svg>
+					</div>
+					<div class="header-submenu">
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bmw"></use></svg>
+							</div>
+							<div class="header-submenu__title">BMW</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#harley"></use></svg>
+							</div>
+							<div class="header-submenu__title">Harley Davidson</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#honda"></use></svg>
+							</div>
+							<div class="header-submenu__title">Honda</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#kawasaki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Kawasaki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#suzuki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Suzuki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#yamaha"></use></svg>
+							</div>
+							<div class="header-submenu__title">Yamaha</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#mozy"></use></svg>
+							</div>
+							<div class="header-submenu__title">Другие марки</div>
+						</a>
+						<a href="./catalog.html" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bike_3"></use></svg>
+							</div>
+							<div class="header-submenu__title">Мотоциклы <b>В наличии</b></div>
+						</a>
+					</div>
+				</div>
+				<div class="header-catalog__item">
+					<a href="./catalog.html" class="header-catalog__link">Обслуживание</a>
+					<div class="header-catalog__toggle js-catalog-toggle">
+						<svg><use href="./img/sprite.svg#arrow-dropdown"></use></svg>
+					</div>
+					<div class="header-submenu">
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bmw"></use></svg>
+							</div>
+							<div class="header-submenu__title">BMW</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#harley"></use></svg>
+							</div>
+							<div class="header-submenu__title">Harley Davidson</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#honda"></use></svg>
+							</div>
+							<div class="header-submenu__title">Honda</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#kawasaki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Kawasaki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#suzuki"></use></svg>
+							</div>
+							<div class="header-submenu__title">Suzuki</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#yamaha"></use></svg>
+							</div>
+							<div class="header-submenu__title">Yamaha</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#mozy"></use></svg>
+							</div>
+							<div class="header-submenu__title">Другие марки</div>
+						</a>
+						<a href="#" class="header-submenu__item">
+							<div class="header-submenu__icon">
+								<svg><use href="./img/sprite.svg#bike_3"></use></svg>
+							</div>
+							<div class="header-submenu__title">Мотоциклы <b>В наличии</b></div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+	<!-- hero-breadcrumbs -->
+	<div class="hero-breadcrumbs" style="background-image: url('./img/webp/hero-8.webp')">
+	<div class="container container_sm">
+		<ul class="breadcrumbs">
+	<li>
+		<a href="./index.html">Главная</a>
+	</li>
+	<li class="slash">/</li>
+	
+	<li class="active">Мотоциклы</li>
+</ul>
+
+		<div class="hero-breadcrumbs__title">Мотоциклы</div>
+	</div>
+</div>
+
+
+	<div class="catalog">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-lg- col-sm-3 col-xs-3">
+					<div class="filter js-filter">
+	<div class="filter__top js-filter-back">Фильтр</div>
+
+	<div class="filter__price">
+		<div class="filter__heading">
+			<div class="filter__title">Цена, $</div>
+			<button class="filter__toggle">
+				<svg><use href="./img/sprite.svg#arrow"></use></svg>
+			</button>
+		</div>
+
+		<div class="js-wrapper">
+			<div class="filter__price-ranges price-ranges">
+				<div class="price-ranges__input">
+					<div class="price-ranges__input-caption">от</div>
+					<input type="text" id="nouislider-input__start" />
+				</div>
+				<div class="price-ranges__input">
+					<div class="price-ranges__input-caption">до</div>
+					<input type="text" id="nouislider-input__end" />
+				</div>
+			</div>
+			<div id="nouislider"></div>
+		</div>
+	</div>
+
+	<div class="filter__options">
+		<div class="filter__heading">
+			<div class="filter__title">Наличие</div>
+			<button class="filter__toggle">
+				<svg><use href="./img/sprite.svg#arrow"></use></svg>
+			</button>
+		</div>
+		<div class="js-wrapper">
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__caption">В наличии</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__caption">Под заказ</div>
+			</label>
+		</div>
+	</div>
+
+	<div class="filter__options">
+		<div class="filter__heading">
+			<div class="filter__title">Объем двигателя</div>
+			<button class="filter__toggle">
+				<svg><use href="./img/sprite.svg#arrow"></use></svg>
+			</button>
+		</div>
+		<div class="js-wrapper">
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__caption">до 250 кубов</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__caption">от 251 до 400 кубов</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__caption">от 401 до 750 кубов</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__caption">от 751 и более</div>
+			</label>
+		</div>
+	</div>
+
+	<div class="filter__options">
+		<div class="filter__heading">
+			<div class="filter__title">Выбор цвета</div>
+			<button class="filter__toggle">
+				<svg><use href="./img/sprite.svg#arrow"></use></svg>
+			</button>
+		</div>
+
+		<div class="filter__color js-wrapper">
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #fff"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #d9d9d9"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #000"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #ffe600"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #ff9a03"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #46dc00"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #00d1ff"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #0018f0"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #7000ff"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #fb1fff"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #de0c25"></span>
+			</label>
+			<label class="checkbox checkbox_big">
+				<input type="checkbox" />
+				<span class="checkmark" style="background-color: #830615"></span>
+			</label>
+		</div>
+	</div>
+
+	<div class="filter__options">
+		<div class="filter__heading">
+			<div class="filter__title">Тип мотоцикла</div>
+			<button class="filter__toggle">
+				<svg><use href="./img/sprite.svg#arrow"></use></svg>
+			</button>
+		</div>
+		<div class="js-wrapper">
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#type-1"></use></svg>
+				</div>
+				<div class="checkbox__caption">Дорожные</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#type-2"></use></svg>
+				</div>
+				<div class="checkbox__caption">Спорт-турист</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#type-3"></use></svg>
+				</div>
+				<div class="checkbox__caption">Спортбайк (Спортивные)</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#type-4"></use></svg>
+				</div>
+				<div class="checkbox__caption">Тур-Эндуро</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#type-5"></use></svg>
+				</div>
+				<div class="checkbox__caption">Туристические</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#type-6"></use></svg>
+				</div>
+				<div class="checkbox__caption">Чопперы</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#type-7"></use></svg>
+				</div>
+				<div class="checkbox__caption">Эндуро / Мотард</div>
+			</label>
+		</div>
+	</div>
+
+	<div class="filter__options">
+		<div class="filter__heading">
+			<div class="filter__title">Марка мотоцикла</div>
+			<button class="filter__toggle">
+				<svg><use href="./img/sprite.svg#arrow"></use></svg>
+			</button>
+		</div>
+
+		<div class="js-wrapper">
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#bmw"></use></svg>
+				</div>
+				<div class="checkbox__caption">BMW</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#harley"></use></svg>
+				</div>
+				<div class="checkbox__caption">Harley Davidson</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#honda"></use></svg>
+				</div>
+				<div class="checkbox__caption">Honda</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#kawasaki"></use></svg>
+				</div>
+				<div class="checkbox__caption">Kawasaki</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#suzuki"></use></svg>
+				</div>
+				<div class="checkbox__caption">Suzuki</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#yamaha"></use></svg>
+				</div>
+				<div class="checkbox__caption">Yamaha</div>
+			</label>
+			<label class="checkbox">
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+				<div class="checkbox__icon">
+					<svg><use href="./img/sprite.svg#mozy"></use></svg>
+				</div>
+				<div class="checkbox__caption">Другие марки</div>
+			</label>
+		</div>
+	</div>
+</div>
+
+					<div class="catalog__recommendation">
+						<div class="section-uptitle-4">Рекомендуемые</div>
+						<div class="section-title-3">Мотоциклы</div>
+						<div class="recommendation-card">
+	<div class="recommendation-card__img">
+		<img src="./img/webp/recommendation-img-1.webp" alt="img" />
+	</div>
+	<div class="recommendation-card__text">
+		<div class="recommendation-card__title">Harley-Davidson Road Glide</div>
+		<div class="recommendation-card__price">
+			<div class="recommendation-card__price-uah">521 700 грн </div>
+			<div class="recommendation-card__price-usd">18 500 $</div>
+		</div>
+		<a href="./product-page.html" class="recommendation-card__details">
+			Подробнее
+			<svg><use href="./img/sprite.svg#arrow"></use></svg>
+		</a>
+	</div>
+</div>
+
+						<div class="recommendation-card">
+	<div class="recommendation-card__img">
+		<img src="./img/webp/recommendation-img-2.webp" alt="img" />
+	</div>
+	<div class="recommendation-card__text">
+		<div class="recommendation-card__title">Honda VFR1200FD ABS</div>
+		<div class="recommendation-card__price">
+			<div class="recommendation-card__price-uah">390 600 грн</div>
+			<div class="recommendation-card__price-usd">14 000 $</div>
+		</div>
+		<a href="./product-page.html" class="recommendation-card__details">
+			Подробнее
+			<svg><use href="./img/sprite.svg#arrow"></use></svg>
+		</a>
+	</div>
+</div>
+
+						<div class="recommendation-card">
+	<div class="recommendation-card__img">
+		<img src="./img/webp/recommendation-img-3.webp" alt="img" />
+	</div>
+	<div class="recommendation-card__text">
+		<div class="recommendation-card__title">Yamaha FZ6 FAZER</div>
+		<div class="recommendation-card__price">
+			<div class="recommendation-card__price-uah">181 350 грн</div>
+			<div class="recommendation-card__price-usd">6 500 $</div>
+		</div>
+		<a href="./product-page.html" class="recommendation-card__details">
+			Подробнее
+			<svg><use href="./img/sprite.svg#arrow"></use></svg>
+		</a>
+	</div>
+</div>
+
+					</div>
+				</div>
+				<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+					<div class="row">
+						<div class="col-xs-6"><button class="btn-primary btn-red filter__mobile-btn js-filter-btn">Фильтр</button></div>
+						<div class="col-xs-6"><div class="sort">
+	<div class="sort__toggle js-sort">
+		<div class="sort__caption">Сортировать:</div>
+		<div class="sort__option">по цене</div>
+		<div class="sort__arrow">
+			<svg><use href="./img/sprite.svg#arrow-dropdown"></use></svg>
+		</div>
+	</div>
+	<div class="sort__menu">
+		<a href="#" class="sort__menu-item">по цене</a>
+		<a href="#" class="sort__menu-item">по объему двигателя</a>
+		<a href="#" class="sort__menu-item">по цвету</a>
+	</div>
+</div>
+</div>
+					</div>
+
+					<div class="catalog__result">
+						<div class="row">
+							<div class="col-lg-4 col-sm-6 col-xs-12">
+								<div class="product-card  ">
+	<div class="product-card__img">
+		<img data-src="./img/webp/product-card-4.webp" alt="img" class="lazy" src="./img/webp/error-placeholder.webp" />
+		 <a href="./reviews-article.html" class="product-card__video-reviews">
+	Видеообзор
+	<svg><use href="./img/sprite.svg#youtube"></use></svg>
+</a>
+
+	</div>
+	<a href="./product-page.html" class="product-card__title">Honda CB400 SF</a>
+	<div class="product-card__description">
+		<div class="product-card__key">Год выпуска:</div>
+		<div class="product-card__value">2016</div>
+		<div class="product-card__key">Двигатель:</div>
+		<div class="product-card__value">1745</div>
+		<div class="product-card__key">Пробег:</div>
+		<div class="product-card__value">3608 ml</div>
+		<div class="product-card__key">Марка:</div>
+		<div class="product-card__value">Harley Davidson</div>
+		<div class="product-card__key">Тип:</div>
+		<div class="product-card__value">Туристические</div>
+		<div class="product-card__key">Объем двигателя:</div>
+		<div class="product-card__value">от 751 кубов и более</div>
+	</div>
+	<div class="product-card__bottom">
+		<div class="product-card__price ">
+			<div class="product-card__price-uah">521 700 грн</div>
+			<div class="product-card__price-usd">18 500 $</div>
+		</div>
+		<a href="./product-page.html" class="product-card__details">
+			Подробнее
+			<svg><use href="./img/sprite.svg#arrow"></use></svg>
+		</a>
+	</div>
+</div>
+
+							</div>
+							<div class="col-lg-4 col-sm-6 col-xs-12">
+								<div class="product-card  ">
+	<div class="product-card__img">
+		<img data-src="./img/webp/product-card-5.webp" alt="img" class="lazy" src="./img/webp/error-placeholder.webp" />
+		<div class="stickers">
+	<div class="stickers__item stickers__item_red">Новинка</div>
+</div>
+ 
+	</div>
+	<a href="./product-page.html" class="product-card__title">Yamaha Drag Star 1100</a>
+	<div class="product-card__description">
+		<div class="product-card__key">Год выпуска:</div>
+		<div class="product-card__value">2016</div>
+		<div class="product-card__key">Двигатель:</div>
+		<div class="product-card__value">1745</div>
+		<div class="product-card__key">Пробег:</div>
+		<div class="product-card__value">3608 ml</div>
+		<div class="product-card__key">Марка:</div>
+		<div class="product-card__value">Harley Davidson</div>
+		<div class="product-card__key">Тип:</div>
+		<div class="product-card__value">Туристические</div>
+		<div class="product-card__key">Объем двигателя:</div>
+		<div class="product-card__value">от 751 кубов и более</div>
+	</div>
+	<div class="product-card__bottom">
+		<div class="product-card__price ">
+			<div class="product-card__price-uah">394 240 грн</div>
+			<div class="product-card__price-usd">14 000 $</div>
+		</div>
+		<a href="./product-page.html" class="product-card__details">
+			Подробнее
+			<svg><use href="./img/sprite.svg#arrow"></use></svg>
+		</a>
+	</div>
+</div>
+
+							</div>
+							<div class="col-lg-4 col-sm-6 col-xs-12">
+								<div class="product-card  ">
+	<div class="product-card__img">
+		<img data-src="./img/webp/product-card-6.webp" alt="img" class="lazy" src="./img/webp/error-placeholder.webp" />
+		<div class="stickers">
+	<div class="stickers__item stickers__item_red">Новинка</div>
+	<div class="stickers__item stickers__item_orange">Скидка 5%</div>
+</div>
+ <a href="./reviews-article.html" class="product-card__video-reviews">
+	Видеообзор
+	<svg><use href="./img/sprite.svg#youtube"></use></svg>
+</a>
+
+	</div>
+	<a href="./product-page.html" class="product-card__title">Honda VFR1200FD ABS</a>
+	<div class="product-card__description">
+		<div class="product-card__key">Год выпуска:</div>
+		<div class="product-card__value">2016</div>
+		<div class="product-card__key">Двигатель:</div>
+		<div class="product-card__value">1745</div>
+		<div class="product-card__key">Пробег:</div>
+		<div class="product-card__value">3608 ml</div>
+		<div class="product-card__key">Марка:</div>
+		<div class="product-card__value">Harley Davidson</div>
+		<div class="product-card__key">Тип:</div>
+		<div class="product-card__value">Туристические</div>
+		<div class="product-card__key">Объем двигателя:</div>
+		<div class="product-card__value">от 751 кубов и более</div>
+	</div>
+	<div class="product-card__bottom">
+		<div class="product-card__price ">
+			<div class="product-card__price-uah">521 700 грн</div>
+			<div class="product-card__price-usd">18 500 $</div>
+		</div>
+		<a href="./product-page.html" class="product-card__details">
+			Подробнее
+			<svg><use href="./img/sprite.svg#arrow"></use></svg>
+		</a>
+	</div>
+</div>
+
+							</div>
+							<div class="col-lg-4 col-sm-6 col-xs-12">
+								<div class="product-card  ">
+	<div class="product-card__img">
+		<img data-src="./img/webp/product-card-4.webp" alt="img" class="lazy" src="./img/webp/error-placeholder.webp" />
+		 <a href="./reviews-article.html" class="product-card__video-reviews">
+	Видеообзор
+	<svg><use href="./img/sprite.svg#youtube"></use></svg>
+</a>
+
+	</div>
+	<a href="./product-page.html" class="product-card__title">Honda CB400 SF</a>
+	<div class="product-card__description">
+		<div class="product-card__key">Год выпуска:</div>
+		<div class="product-card__value">2016</div>
+		<div class="product-card__key">Двигатель:</div>
+		<div class="product-card__value">1745</div>
+		<div class="product-card__key">Пробег:</div>
+		<div class="product-card__value">3608 ml</div>
+		<div class="product-card__key">Марка:</div>
+		<div class="product-card__value">Harley Davidson</div>
+		<div class="product-card__key">Тип:</div>
+		<div class="product-card__value">Туристические</div>
+		<div class="product-card__key">Объем двигателя:</div>
+		<div class="product-card__value">от 751 кубов и более</div>
+	</div>
+	<div class="product-card__bottom">
+		<div class="product-card__price ">
+			<div class="product-card__price-uah">521 700 грн</div>
+			<div class="product-card__price-usd">18 500 $</div>
+		</div>
+		<a href="./product-page.html" class="product-card__details">
+			Подробнее
+			<svg><use href="./img/sprite.svg#arrow"></use></svg>
+		</a>
+	</div>
+</div>
+
+							</div>
+							<div class="col-lg-4 col-sm-6 col-xs-12">
+								<div class="product-card  ">
+	<div class="product-card__img">
+		<img data-src="./img/webp/product-card-5.webp" alt="img" class="lazy" src="./img/webp/error-placeholder.webp" />
+		<div class="stickers">
+	<div class="stickers__item stickers__item_red">Новинка</div>
+</div>
+ 
+	</div>
+	<a href="./product-page.html" class="product-card__title">Yamaha Drag Star 1100</a>
+	<div class="product-card__description">
+		<div class="product-card__key">Год выпуска:</div>
+		<div class="product-card__value">2016</div>
+		<div class="product-card__key">Двигатель:</div>
+		<div class="product-card__value">1745</div>
+		<div class="product-card__key">Пробег:</div>
+		<div class="product-card__value">3608 ml</div>
+		<div class="product-card__key">Марка:</div>
+		<div class="product-card__value">Harley Davidson</div>
+		<div class="product-card__key">Тип:</div>
+		<div class="product-card__value">Туристические</div>
+		<div class="product-card__key">Объем двигателя:</div>
+		<div class="product-card__value">от 751 кубов и более</div>
+	</div>
+	<div class="product-card__bottom">
+		<div class="product-card__price ">
+			<div class="product-card__price-uah">394 240 грн</div>
+			<div class="product-card__price-usd">14 000 $</div>
+		</div>
+		<a href="./product-page.html" class="product-card__details">
+			Подробнее
+			<svg><use href="./img/sprite.svg#arrow"></use></svg>
+		</a>
+	</div>
+</div>
+
+							</div>
+							<div class="col-lg-4 col-sm-6 col-xs-12">
+								<div class="product-card  ">
+	<div class="product-card__img">
+		<img data-src="./img/webp/product-card-6.webp" alt="img" class="lazy" src="./img/webp/error-placeholder.webp" />
+		<div class="stickers">
+	<div class="stickers__item stickers__item_red">Новинка</div>
+	<div class="stickers__item stickers__item_orange">Скидка 5%</div>
+</div>
+ <a href="./reviews-article.html" class="product-card__video-reviews">
+	Видеообзор
+	<svg><use href="./img/sprite.svg#youtube"></use></svg>
+</a>
+
+	</div>
+	<a href="./product-page.html" class="product-card__title">Honda VFR1200FD ABS</a>
+	<div class="product-card__description">
+		<div class="product-card__key">Год выпуска:</div>
+		<div class="product-card__value">2016</div>
+		<div class="product-card__key">Двигатель:</div>
+		<div class="product-card__value">1745</div>
+		<div class="product-card__key">Пробег:</div>
+		<div class="product-card__value">3608 ml</div>
+		<div class="product-card__key">Марка:</div>
+		<div class="product-card__value">Harley Davidson</div>
+		<div class="product-card__key">Тип:</div>
+		<div class="product-card__value">Туристические</div>
+		<div class="product-card__key">Объем двигателя:</div>
+		<div class="product-card__value">от 751 кубов и более</div>
+	</div>
+	<div class="product-card__bottom">
+		<div class="product-card__price ">
+			<div class="product-card__price-uah">521 700 грн</div>
+			<div class="product-card__price-usd">18 500 $</div>
+		</div>
+		<a href="./product-page.html" class="product-card__details">
+			Подробнее
+			<svg><use href="./img/sprite.svg#arrow"></use></svg>
+		</a>
+	</div>
+</div>
+
+							</div>
+							<div class="col-lg-4 col-sm-6 col-xs-12">
+								<div class="product-card  ">
+	<div class="product-card__img">
+		<img data-src="./img/webp/product-card-4.webp" alt="img" class="lazy" src="./img/webp/error-placeholder.webp" />
+		 <a href="./reviews-article.html" class="product-card__video-reviews">
+	Видеообзор
+	<svg><use href="./img/sprite.svg#youtube"></use></svg>
+</a>
+
+	</div>
+	<a href="./product-page.html" class="product-card__title">Honda CB400 SF</a>
+	<div class="product-card__description">
+		<div class="product-card__key">Год выпуска:</div>
+		<div class="product-card__value">2016</div>
+		<div class="product-card__key">Двигатель:</div>
+		<div class="product-card__value">1745</div>
+		<div class="product-card__key">Пробег:</div>
+		<div class="product-card__value">3608 ml</div>
+		<div class="product-card__key">Марка:</div>
+		<div class="product-card__value">Harley Davidson</div>
+		<div class="product-card__key">Тип:</div>
+		<div class="product-card__value">Туристические</div>
+		<div class="product-card__key">Объем двигателя:</div>
+		<div class="product-card__value">от 751 кубов и более</div>
+	</div>
+	<div class="product-card__bottom">
+		<div class="product-card__price ">
+			<div class="product-card__price-uah">521 700 грн</div>
+			<div class="product-card__price-usd">18 500 $</div>
+		</div>
+		<a href="./product-page.html" class="product-card__details">
+			Подробнее
+			<svg><use href="./img/sprite.svg#arrow"></use></svg>
+		</a>
+	</div>
+</div>
+
+							</div>
+							<div class="col-lg-4 col-sm-6 col-xs-12">
+								<div class="product-card  ">
+	<div class="product-card__img">
+		<img data-src="./img/webp/product-card-5.webp" alt="img" class="lazy" src="./img/webp/error-placeholder.webp" />
+		<div class="stickers">
+	<div class="stickers__item stickers__item_red">Новинка</div>
+</div>
+ 
+	</div>
+	<a href="./product-page.html" class="product-card__title">Yamaha Drag Star 1100</a>
+	<div class="product-card__description">
+		<div class="product-card__key">Год выпуска:</div>
+		<div class="product-card__value">2016</div>
+		<div class="product-card__key">Двигатель:</div>
+		<div class="product-card__value">1745</div>
+		<div class="product-card__key">Пробег:</div>
+		<div class="product-card__value">3608 ml</div>
+		<div class="product-card__key">Марка:</div>
+		<div class="product-card__value">Harley Davidson</div>
+		<div class="product-card__key">Тип:</div>
+		<div class="product-card__value">Туристические</div>
+		<div class="product-card__key">Объем двигателя:</div>
+		<div class="product-card__value">от 751 кубов и более</div>
+	</div>
+	<div class="product-card__bottom">
+		<div class="product-card__price ">
+			<div class="product-card__price-uah">394 240 грн</div>
+			<div class="product-card__price-usd">14 000 $</div>
+		</div>
+		<a href="./product-page.html" class="product-card__details">
+			Подробнее
+			<svg><use href="./img/sprite.svg#arrow"></use></svg>
+		</a>
+	</div>
+</div>
+
+							</div>
+							<div class="col-lg-4 col-sm-6 col-xs-12">
+								<div class="product-card  ">
+	<div class="product-card__img">
+		<img data-src="./img/webp/product-card-6.webp" alt="img" class="lazy" src="./img/webp/error-placeholder.webp" />
+		<div class="stickers">
+	<div class="stickers__item stickers__item_red">Новинка</div>
+	<div class="stickers__item stickers__item_orange">Скидка 5%</div>
+</div>
+ <a href="./reviews-article.html" class="product-card__video-reviews">
+	Видеообзор
+	<svg><use href="./img/sprite.svg#youtube"></use></svg>
+</a>
+
+	</div>
+	<a href="./product-page.html" class="product-card__title">Honda VFR1200FD ABS</a>
+	<div class="product-card__description">
+		<div class="product-card__key">Год выпуска:</div>
+		<div class="product-card__value">2016</div>
+		<div class="product-card__key">Двигатель:</div>
+		<div class="product-card__value">1745</div>
+		<div class="product-card__key">Пробег:</div>
+		<div class="product-card__value">3608 ml</div>
+		<div class="product-card__key">Марка:</div>
+		<div class="product-card__value">Harley Davidson</div>
+		<div class="product-card__key">Тип:</div>
+		<div class="product-card__value">Туристические</div>
+		<div class="product-card__key">Объем двигателя:</div>
+		<div class="product-card__value">от 751 кубов и более</div>
+	</div>
+	<div class="product-card__bottom">
+		<div class="product-card__price ">
+			<div class="product-card__price-uah">521 700 грн</div>
+			<div class="product-card__price-usd">18 500 $</div>
+		</div>
+		<a href="./product-page.html" class="product-card__details">
+			Подробнее
+			<svg><use href="./img/sprite.svg#arrow"></use></svg>
+		</a>
+	</div>
+</div>
+
+							</div>
+							<div class="col-lg-4 col-sm-6 col-xs-12">
+								<div class="product-card  ">
+	<div class="product-card__img">
+		<img data-src="./img/webp/product-card-4.webp" alt="img" class="lazy" src="./img/webp/error-placeholder.webp" />
+		 <a href="./reviews-article.html" class="product-card__video-reviews">
+	Видеообзор
+	<svg><use href="./img/sprite.svg#youtube"></use></svg>
+</a>
+
+	</div>
+	<a href="./product-page.html" class="product-card__title">Honda CB400 SF</a>
+	<div class="product-card__description">
+		<div class="product-card__key">Год выпуска:</div>
+		<div class="product-card__value">2016</div>
+		<div class="product-card__key">Двигатель:</div>
+		<div class="product-card__value">1745</div>
+		<div class="product-card__key">Пробег:</div>
+		<div class="product-card__value">3608 ml</div>
+		<div class="product-card__key">Марка:</div>
+		<div class="product-card__value">Harley Davidson</div>
+		<div class="product-card__key">Тип:</div>
+		<div class="product-card__value">Туристические</div>
+		<div class="product-card__key">Объем двигателя:</div>
+		<div class="product-card__value">от 751 кубов и более</div>
+	</div>
+	<div class="product-card__bottom">
+		<div class="product-card__price ">
+			<div class="product-card__price-uah">521 700 грн</div>
+			<div class="product-card__price-usd">18 500 $</div>
+		</div>
+		<a href="./product-page.html" class="product-card__details">
+			Подробнее
+			<svg><use href="./img/sprite.svg#arrow"></use></svg>
+		</a>
+	</div>
+</div>
+
+							</div>
+							<div class="col-lg-4 col-sm-6 col-xs-12">
+								<div class="product-card  ">
+	<div class="product-card__img">
+		<img data-src="./img/webp/product-card-5.webp" alt="img" class="lazy" src="./img/webp/error-placeholder.webp" />
+		<div class="stickers">
+	<div class="stickers__item stickers__item_red">Новинка</div>
+</div>
+ 
+	</div>
+	<a href="./product-page.html" class="product-card__title">Yamaha Drag Star 1100</a>
+	<div class="product-card__description">
+		<div class="product-card__key">Год выпуска:</div>
+		<div class="product-card__value">2016</div>
+		<div class="product-card__key">Двигатель:</div>
+		<div class="product-card__value">1745</div>
+		<div class="product-card__key">Пробег:</div>
+		<div class="product-card__value">3608 ml</div>
+		<div class="product-card__key">Марка:</div>
+		<div class="product-card__value">Harley Davidson</div>
+		<div class="product-card__key">Тип:</div>
+		<div class="product-card__value">Туристические</div>
+		<div class="product-card__key">Объем двигателя:</div>
+		<div class="product-card__value">от 751 кубов и более</div>
+	</div>
+	<div class="product-card__bottom">
+		<div class="product-card__price ">
+			<div class="product-card__price-uah">394 240 грн</div>
+			<div class="product-card__price-usd">14 000 $</div>
+		</div>
+		<a href="./product-page.html" class="product-card__details">
+			Подробнее
+			<svg><use href="./img/sprite.svg#arrow"></use></svg>
+		</a>
+	</div>
+</div>
+
+							</div>
+							<div class="col-lg-4 col-sm-6 col-xs-12">
+								<div class="product-card  ">
+	<div class="product-card__img">
+		<img data-src="./img/webp/product-card-6.webp" alt="img" class="lazy" src="./img/webp/error-placeholder.webp" />
+		<div class="stickers">
+	<div class="stickers__item stickers__item_red">Новинка</div>
+	<div class="stickers__item stickers__item_orange">Скидка 5%</div>
+</div>
+ <a href="./reviews-article.html" class="product-card__video-reviews">
+	Видеообзор
+	<svg><use href="./img/sprite.svg#youtube"></use></svg>
+</a>
+
+	</div>
+	<a href="./product-page.html" class="product-card__title">Honda VFR1200FD ABS</a>
+	<div class="product-card__description">
+		<div class="product-card__key">Год выпуска:</div>
+		<div class="product-card__value">2016</div>
+		<div class="product-card__key">Двигатель:</div>
+		<div class="product-card__value">1745</div>
+		<div class="product-card__key">Пробег:</div>
+		<div class="product-card__value">3608 ml</div>
+		<div class="product-card__key">Марка:</div>
+		<div class="product-card__value">Harley Davidson</div>
+		<div class="product-card__key">Тип:</div>
+		<div class="product-card__value">Туристические</div>
+		<div class="product-card__key">Объем двигателя:</div>
+		<div class="product-card__value">от 751 кубов и более</div>
+	</div>
+	<div class="product-card__bottom">
+		<div class="product-card__price ">
+			<div class="product-card__price-uah">521 700 грн</div>
+			<div class="product-card__price-usd">18 500 $</div>
+		</div>
+		<a href="./product-page.html" class="product-card__details">
+			Подробнее
+			<svg><use href="./img/sprite.svg#arrow"></use></svg>
+		</a>
+	</div>
+</div>
+
+							</div>
+							<div class="col-xs-12"><ul class="pagination">
+	<li>
+		<a href="#" class="pagination__item pagination__item-prev">
+			<svg><use href="./img/sprite.svg#arrow"></use></svg>
+		</a>
+	</li>
+	<li>
+		<a href="#" class="pagination__item">1</a>
+	</li>
+	<li>
+		<a href="#" class="pagination__item">2</a>
+	</li>
+	<li class="active">3</li>
+	<li>
+		<a href="#" class="pagination__item">4</a>
+	</li>
+	<li>
+		<a href="#" class="pagination__item">5</a>
+	</li>
+	<li>
+		<a href="#" class="pagination__item">6</a>
+	</li>
+	<li>
+		<a href="#" class="pagination__item pagination__item-next">
+			<svg><use href="./img/sprite.svg#arrow"></use></svg>
+		</a>
+	</li>
+</ul>
+</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="price">
+		<div class="section-decoration-title">Цены</div>
+		<div class="container">
+			<div class="section-uptitle">Цены на</div>
+			<div class="section-title">Мотоциклы</div>
+			<div class="price-table">
+				<div class="price-table__key">Мотоцикл Suzuki VAN VAN</div>
+				<div class="price-table__value">
+					<span>97 650 грн </span>
+					<span>3 500 $</span>
+				</div>
+				<div class="price-table__key">Мотоцикл Suzuki DJEBEL 250 XC</div>
+				<div class="price-table__value">
+					<span>125 550 грн</span>
+					<span>4 500 $</span>
+				</div>
+				<div class="price-table__key">Мотоцикл Yamaha TTR 250 RAID</div>
+				<div class="price-table__value">
+					<span>97 650 грн </span>
+					<span> 3 500 $</span>
+				</div>
+				<div class="price-table__key">Мотоцикл Yamaha TTR 250 RAID</div>
+				<div class="price-table__value">
+					<span>97 650 грн </span>
+					<span> 3 500 $</span>
+				</div>
+				<div class="price-table__key price-table__key_no-border">Мотоцикл Suzuki VAN VAN</div>
+				<div class="price-table__value">
+					<span>97 650 грн </span>
+					<span> 3 500 $</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--faq  -->
+	<div class="faq">
+	<div class="section-decoration-title">Ответы</div>
+	<div class="container">
+		<div class="section-uptitle">Вопрос</div>
+		<div class="section-title">Ответ</div>
+
+		<div class="faq-item">
+			<div class="faq-item__question">Как купить мотоцикл у нас?</div>
+			<button class="faq-item__toggle js-toggle">
+				<span></span>
+				<span></span>
+			</button>
+			<div class="faq-item__answer">
+				<ul>
+					<li>
+						предоплата в размере 500 $ от стоимости ТС на карточный счет, либо любым другим удобным для покупателя методом, обговаривается
+						индивидуально
+					</li>
+					<li>
+						окончательный расчет, наложенный платеж при получении (либо любым другим удобным для покупателя методом, обговаривается
+						индивидуально)
+					</li>
+				</ul>
+				<p>
+					В стоимость мотоцикла входит весь необходимый пакет документов, для оформления мотоцикла в дальнейшем в МРЭО, для этого покупателю
+					необходимо выслать следующие документы будущего владельца ТС на нашу почту motoyard.com.ua@gmail.com
+				</p>
+				<ul>
+					<li>скан копия всех страниц паспорта (полный разворот) включая прописку</li>
+					<li>скан копия идентификационного кода</li>
+					<li>прописать в тексте письма прописку на украинском языке</li>
+				</ul>
+			</div>
+		</div>
+		<div class="faq-item">
+			<div class="faq-item__question">Какие марку мотоцикла выбрать?</div>
+			<button class="faq-item__toggle js-toggle">
+				<span></span>
+				<span></span>
+			</button>
+			<div class="faq-item__answer">
+				<ul>
+					<li>
+						предоплата в размере 500 $ от стоимости ТС на карточный счет, либо любым другим удобным для покупателя методом, обговаривается
+						индивидуально
+					</li>
+					<li>
+						окончательный расчет, наложенный платеж при получении (либо любым другим удобным для покупателя методом, обговаривается
+						индивидуально)
+					</li>
+				</ul>
+				<p>
+					В стоимость мотоцикла входит весь необходимый пакет документов, для оформления мотоцикла в дальнейшем в МРЭО, для этого покупателю
+					необходимо выслать следующие документы будущего владельца ТС на нашу почту motoyard.com.ua@gmail.com
+				</p>
+				<ul>
+					<li>скан копия всех страниц паспорта (полный разворот) включая прописку</li>
+					<li>скан копия идентификационного кода</li>
+					<li>прописать в тексте письма прописку на украинском языке</li>
+				</ul>
+			</div>
+		</div>
+		<div class="faq-item">
+			<div class="faq-item__question">Оплата мотоциклов</div>
+			<button class="faq-item__toggle js-toggle">
+				<span></span>
+				<span></span>
+			</button>
+			<div class="faq-item__answer">
+				<ul>
+					<li>
+						предоплата в размере 500 $ от стоимости ТС на карточный счет, либо любым другим удобным для покупателя методом, обговаривается
+						индивидуально
+					</li>
+					<li>
+						окончательный расчет, наложенный платеж при получении (либо любым другим удобным для покупателя методом, обговаривается
+						индивидуально)
+					</li>
+				</ul>
+				<p>
+					В стоимость мотоцикла входит весь необходимый пакет документов, для оформления мотоцикла в дальнейшем в МРЭО, для этого покупателю
+					необходимо выслать следующие документы будущего владельца ТС на нашу почту motoyard.com.ua@gmail.com
+				</p>
+				<ul>
+					<li>скан копия всех страниц паспорта (полный разворот) включая прописку</li>
+					<li>скан копия идентификационного кода</li>
+					<li>прописать в тексте письма прописку на украинском языке</li>
+				</ul>
+			</div>
+		</div>
+		<div class="faq-item">
+			<div class="faq-item__question">Какую марку мотоцикла выбрать?</div>
+			<button class="faq-item__toggle js-toggle">
+				<span></span>
+				<span></span>
+			</button>
+			<div class="faq-item__answer">
+				<ul>
+					<li>
+						предоплата в размере 500 $ от стоимости ТС на карточный счет, либо любым другим удобным для покупателя методом, обговаривается
+						индивидуально
+					</li>
+					<li>
+						окончательный расчет, наложенный платеж при получении (либо любым другим удобным для покупателя методом, обговаривается
+						индивидуально)
+					</li>
+				</ul>
+				<p>
+					В стоимость мотоцикла входит весь необходимый пакет документов, для оформления мотоцикла в дальнейшем в МРЭО, для этого покупателю
+					необходимо выслать следующие документы будущего владельца ТС на нашу почту motoyard.com.ua@gmail.com
+				</p>
+				<ul>
+					<li>скан копия всех страниц паспорта (полный разворот) включая прописку</li>
+					<li>скан копия идентификационного кода</li>
+					<li>прописать в тексте письма прописку на украинском языке</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	<!-- question -->
+	<div class="question">
+	<div class="container">
+		<div class="question__heading">
+			<div class="section-title">Вопросы (2)</div>
+			<a href="./reviews.html" class="btn btn-primary btn-size-2 btn-border"> оставить вопрос</a>
+		</div>
+		<div class="question__item">
+			<div class="question__item-heading">
+				<div class="question__item-name">Ирина</div>
+				<div class="question__item-date">(15.08.2021)</div>
+			</div>
+			<div class="question__item-text">
+				Всем привет! После аварии в июне я задалась вопросом о покупке нового шлема. Так денег был не особо много, решила взять довольно
+				бюджетный вариант
+			</div>
+		</div>
+		<div class="question__item">
+			<div class="question__item-heading">
+				<div class="question__item-name">Ирина</div>
+				<div class="question__item-date">(15.08.2021)</div>
+			</div>
+			<div class="question__item-text">
+				Всем привет! После аварии в июне я задалась вопросом о покупке нового шлема. Так денег был не особо много, решила взять довольно
+				бюджетный вариант
+			</div>
+		</div>
+		<div class="question__item question__item_reply">
+			<div class="question__item-heading">
+				<div class="question__item-name question__item-name_reply">Менеджер MotoYard</div>
+				<div class="question__item-date">(16.08.2021)</div>
+			</div>
+			<div class="question__item-text">Спасибо за отзыв! Будем рады помочь, в подборе новой экипировки и мотоцикла в вашем гараже!</div>
+		</div>
+	</div>
+</div>
+
+
+	<!-- seo -->
+	<div class="container seo__container">
+	<div class="seo">
+		<h1>Интернет-магазин MotoYard.</h1>
+		<h2>Интернет-магазин MotoYard.</h2>
+		<h3>Интернет-магазин MotoYard.</h3>
+		<h4>Интернет-магазин MotoYard.</h4>
+		<h5>Интернет-магазин MotoYard.</h5>
+		<p>
+			Конечно, основным аргументом для того, чтобы купить мотоцикл в Днепре и по другим городам Украины является ценовая политика.
+			Gрактически все товары, представленные на сайте, являются техникой, произведенной в Японии. Если Вы находитесь в поиске надежного
+			«железного друга», рекомендуем заглянуть в каталог квадроциклов и вездеходов. Здесь Вы найдете лучшую мототехнику, которая отличается
+			по классу и стоимости. Не важно, новичок Вы или байкер со стажем, в любом случае, Вы найдете здесь транспорт по душе. Для рациональных
+			заказчиков, мы подобрали мототехнику б/у. Все модели мотоциклов проходят скрупулезную проверку и обязательный технический осмотр,
+			поэтому Вы можете не беспокоиться о качестве приобретаемого мото.
+		</p>
+		<p>
+			Конечно, основным аргументом для того, чтобы купить мотоцикл в Днепре и по другим городам Украины является ценовая политика.
+			Gрактически все товары, представленные на сайте, являются техникой, произведенной в Японии. Если Вы находитесь в поиске надежного
+			«железного друга», рекомендуем заглянуть в каталог квадроциклов и вездеходов. Здесь Вы найдете лучшую мототехнику, которая отличается
+			по классу и стоимости. Не важно, новичок Вы или байкер со стажем, в любом случае, Вы найдете здесь транспорт по душе. Для рациональных
+			заказчиков, мы подобрали мототехнику б/у. Все модели мотоциклов проходят скрупулезную проверку и обязательный технический осмотр,
+			поэтому Вы можете не беспокоиться о качестве приобретаемого мото.
+		</p>
+	</div>
+</div>
+
+	<!--callback  -->
+	<div class="callback">
+	<div class="callback__decoration-img">
+		<img data-src="./img/webp/callback-decoration.webp" alt="img" class="lazy" />
+	</div>
+	<div class="container">
+		<div class="callback__wrapper">
+			<div class="row middle-lg">
+				<div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+					<div class="section-uptitle_smaller">оставьте заявку</div>
+					<div class="section-title_smaller">получите бесплатную консультацию</div>
+				</div>
+				<div class="col-lg-5 ol-md-12 col-sm-12 col-xs-12">
+					<form action="" class="callback__form">
+						<div class="input input_gradient">
+							<input type="text" placeholder="Ваше имя *" />
+						</div>
+						<div class="input input_gradient">
+							<input type="tel" placeholder="+38 000 000 00 00" />
+						</div>
+						<button type="submit" class="btn-primary btn-red btn-size-4">Оставить заявку</button>
+						<div class="callback__form-caption">
+							Нажимая на кнопку, Вы принимаете условия пользовательского соглашения и даете согласие на обработку ваших персональных данных
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+<!-- footer -->
+<footer class="footer">
+	<div class="footer__top">
+		<div class="container container_sm">
+			<ul class="footer__services">
+				<li>
+					<a href="./catalog.html" class="footer__services-link">Мотоциклы</a>
+				</li>
+				<li>
+					<a href="./catalog.html" class="footer__services-link">Макси скутера</a>
+				</li>
+				<li>
+					<a href="./catalog.html" class="footer__services-link">Тип Мотоцикла</a>
+				</li>
+				<li>
+					<a href="./catalog.html" class="footer__services-link">Мотоциклы Под заказ</a>
+				</li>
+				<li>
+					<a href="./catalog.html" class="footer__services-link">Распродажа</a>
+				</li>
+				<li>
+					<a href="./catalog.html" class="footer__services-link">Экипировка</a>
+				</li>
+				<li>
+					<a href="./catalog.html" class="footer__services-link">Обслуживание</a>
+				</li>
+			</ul>
+			<a href="#" class="footer__testdrive">Тест-драйв</a>
+			<a href="#" class="footer__online">Онлайн осмотр</a>
+		</div>
+	</div>
+	<div class="footer__bottom">
+		<div class="container container_sm">
+			<div class="footer__bottom-wrapper">
+				<a href="./index.html" class="logo logo_footer">
+					<svg><use href="./img/sprite.svg#logo_black"></use></svg>
+				</a>
+				<ul class="footer__menu">
+					<li><a href="./about.html" class="footer__menu-link">О нас</a></li>
+					<li><a href="./blog.html" class="footer__menu-link">Блог</a></li>
+					<li><a href="./video-reviews.html" class="footer__menu-link">Видео-обзоры</a></li>
+					<li>
+						<span class="menu__sticker menu__sticker_red">150+</span>
+						<a href="./reviews.html" class="footer__menu-link">Отзывы</a>
+					
+					</li>
+					<li><a href="./delivery-payment.html" class="footer__menu-link">Оплата и доставка</a></li>
+					<li><a href="./contacts" class="footer__menu-link">Контакты</a></li>
+				</ul>
+				<div class="footer__contacts">
+					<div class="footer__contacts-icon">
+						<svg>
+							<use href="./img/sprite.svg#pin_red"></use>
+						</svg>
+					</div>
+					<div class="footer__contacts-text">
+						Украина, г. Днепр <br />
+						пр-т Александра Поля, 97
+					</div>
+				</div>
+
+				<div class="footer__callback">
+					<a href="#" class="footer__callback-href">+38 (067) 652 28 48 </a>
+					<a href="#" class="footer__callback-btn">Заказать звонок</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer__copyright">
+		<div class="container container_sm">
+			<div class="footer__copyright-text">© 2014-2021 MotoYard</div>
+			<div class="footer__dev">
+				Интернет-магазин разработан и <br />
+				поддерживается веб-студией 
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div class="modal" id="thanks">
+	<div class="modal__title">Спасибо!</div>
+	<div class="modal__subtitle modal__subtitle_bold">Ваш заказ был принят!</div>
+</div>
+
+<div class="modal" id="callback">
+	<div class="modal__title modal__title_sm">Обратный звонок</div>
+	<div class="modal__subtitle">
+		Оставьте ваши данные и наш менеджер <br />
+		свяжется с Вами
+	</div>
+
+	<form class="modal__form">
+		<div class="input input_gradient">
+			<input type="text" class="js-placeholder" />
+			<label class="input__placeholder">Ваше имя</label>
+		</div>
+		<div class="input input_gradient">
+			<input type="tel" placeholder="+38 000 000 00 00" />
+		</div>
+		<button class="btn-primary btn-red btn-size-1">Оставить заявку</button>
+		<div class="modal__notice">
+			Нажимая на кнопку, Вы принимаете условия пользовательского <br />
+			соглашения и даете согласие на обработку ваших персональных данных
+		</div>
+	</form>
+</div>
+
+<div class="modal" id="cart">
+	<div class="modal__row">
+		<div class="modal__cart-img">
+			<img src="./img/webp/modal-img.webp" alt="img" />
+		</div>
+		<div class="modal__cart-text">
+			Товар <a href="./product-page.html">Yamaha FZ6 FAZER </a> был успешно <br />
+			добавлен в корзину!
+		</div>
+	</div>
+</div>
+
+<div class="modal" id="search">
+	<div class="modal__subtitle modal__subtitle_bold modal__subtitle_left">Поиск по сайту</div>
+	<form action="" class="modal__search">
+		<div class="input input_bottom-border"><input type="text" placeholder="поиск" /></div>
+		<button class="btn-search">
+			<svg><use href="./img/sprite.svg#search"></use></svg>
+		</button>
+	</form>
+</div>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./css/main.min.css" />
+<script src="./js/jquery.min.js"></script>
+<script src="./js/app.min.js"></script>
+</body>
+</html>
+
